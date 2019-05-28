@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "fugle-realtime"
-version = "0.1.2"
+version = "0.1.5"
 description = "Fugle Realtime"
 license = "MIT"
 readme = "README.md"
 homepage = "https://developer.fugle.tw/realtime"
 repository = "https://github.com/fortuna-intelligence/fugle-realtime-py"
 documentation = "https://developer.fugle.tw/realtime/document"
-keywords = "fortuna fugle intelligence realtime taiwan"
+keywords = ["fortuna", "fugle", "intelligence", "realtime", "taiwan"]
 authors = ["Fortuna Intelligence Co., Ltd. <development@fugle.tw>"]
 
 [tool.poetry.dependencies]
