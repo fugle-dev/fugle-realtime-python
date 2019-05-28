@@ -1,5 +1,7 @@
 # fugle-realtime-py
 
+Fugle Realtime Python
+
 ## Documentation
 
 https://developer.fugle.tw/realtime
@@ -44,7 +46,7 @@ intraday.trades(apiToken="demo", output="dataframe", symbolId="2884")
 
 `symbolId="2884"` is only allowed when `apiToken="demo"`. To access more `symbolId`, you will have to get your own `apiToken`. Please visit https://developer.fugle.tw/realtime/apiToken for detailed instructions.
 
-For complete documentation of each URL specified above, please visit https://developer.fugle.tw/realtime/document.
+For complete documentation of each URL and its parameters in association with the corresponding function and its arguments specified above, please visit https://developer.fugle.tw/realtime/document.
 
 ## Contributing
 
