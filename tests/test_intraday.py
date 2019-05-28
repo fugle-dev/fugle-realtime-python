@@ -12,7 +12,7 @@ def test_intraday_chart_output():
     with raises(ValueError) as excinfo:
         intraday.chart(output="")
     assert excinfo.type is ValueError
-    assert excinfo.value.args[0] == 'output must be one of ["dataframe", "raw"]'
+    assert str(excinfo.value) == 'output must be one of ["dataframe", "raw"]'
 
 
 def test_intraday_chart_output_dataframe():
@@ -34,7 +34,7 @@ def test_intraday_meta_output():
     with raises(ValueError) as excinfo:
         intraday.meta(output="")
     assert excinfo.type is ValueError
-    assert excinfo.value.args[0] == 'output must be one of ["dataframe", "raw"]'
+    assert str(excinfo.value) == 'output must be one of ["dataframe", "raw"]'
 
 
 def test_intraday_meta_output_dataframe():
@@ -56,7 +56,7 @@ def test_intraday_quote_output():
     with raises(ValueError) as excinfo:
         intraday.quote(output="")
     assert excinfo.type is ValueError
-    assert excinfo.value.args[0] == 'output must be one of ["dataframe", "raw"]'
+    assert str(excinfo.value) == 'output must be one of ["dataframe", "raw"]'
 
 
 def test_intraday_quote_output_dataframe():
@@ -78,7 +78,7 @@ def test_intraday_trades_output():
     with raises(ValueError) as excinfo:
         intraday.trades(output="")
     assert excinfo.type is ValueError
-    assert excinfo.value.args[0] == 'output must be one of ["dataframe", "raw"]'
+    assert str(excinfo.value) == 'output must be one of ["dataframe", "raw"]'
 
 
 def test_intraday_trades_output_dataframe():
