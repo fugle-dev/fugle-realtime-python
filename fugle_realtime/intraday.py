@@ -7,27 +7,30 @@ def chart(
     apiToken="demo",
     apiVersion="v0",
     host="api.fugle.tw",
-    output="pandas",
+    output="dataframe",
     symbolId="2884",
 ):
+    outputs = ["dataframe", "raw"]
+    if output not in outputs:
+        raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/chart".format(host, apiVersion)
     params = dict(apiToken=apiToken, symbolId=symbolId)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
-        if output == "pandas":
+        if output == "dataframe":
             return json_normalize(json)
-        else:
+        elif output == "raw":
             return json
     chart = json["data"]["chart"]
-    if output == "pandas":
+    if output == "dataframe":
         chart = [dict(at=at, **rest) for at, rest in chart.items()]
         df = json_normalize(chart)
         df["at"] = to_datetime(df["at"])
         df = df.sort_values("at")
         df = df.reset_index(drop=True)
         return df
-    else:
+    elif output == "raw":
         return chart
 
 
@@ -35,22 +38,25 @@ def meta(
     apiToken="demo",
     apiVersion="v0",
     host="api.fugle.tw",
-    output="pandas",
+    output="dataframe",
     symbolId="2884",
 ):
+    outputs = ["dataframe", "raw"]
+    if output not in outputs:
+        raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/meta".format(host, apiVersion)
     params = dict(apiToken=apiToken, symbolId=symbolId)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
-        if output == "pandas":
+        if output == "dataframe":
             return json_normalize(json)
-        else:
+        elif output == "raw":
             return json
     meta = json["data"]["meta"]
-    if output == "pandas":
+    if output == "dataframe":
         return json_normalize(meta)
-    else:
+    elif output == "raw":
         return meta
 
 
@@ -58,22 +64,25 @@ def quote(
     apiToken="demo",
     apiVersion="v0",
     host="api.fugle.tw",
-    output="pandas",
+    output="dataframe",
     symbolId="2884",
 ):
+    outputs = ["dataframe", "raw"]
+    if output not in outputs:
+        raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/quote".format(host, apiVersion)
     params = dict(apiToken=apiToken, symbolId=symbolId)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
-        if output == "pandas":
+        if output == "dataframe":
             return json_normalize(json)
-        else:
+        elif output == "raw":
             return json
     quote = json["data"]["quote"]
-    if output == "pandas":
+    if output == "dataframe":
         return json_normalize(quote)
-    else:
+    elif output == "raw":
         return quote
 
 
@@ -81,24 +90,27 @@ def trades(
     apiToken="demo",
     apiVersion="v0",
     host="api.fugle.tw",
-    output="pandas",
+    output="dataframe",
     symbolId="2884",
 ):
+    outputs = ["dataframe", "raw"]
+    if output not in outputs:
+        raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/trades".format(host, apiVersion)
     params = dict(apiToken=apiToken, symbolId=symbolId)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
-        if output == "pandas":
+        if output == "dataframe":
             return json_normalize(json)
-        else:
+        elif output == "raw":
             return json
     trades = json["data"]["trades"]
-    if output == "pandas":
+    if output == "dataframe":
         df = json_normalize(trades)
         df["at"] = to_datetime(df["at"])
         df = df.sort_values("at")
         df = df.reset_index(drop=True)
         return df
-    else:
+    elif output == "raw":
         return trades
