@@ -26,9 +26,10 @@ def chart(
     if output == "dataframe":
         chart = [dict(at=at, **rest) for at, rest in chart.items()]
         df = json_normalize(chart)
-        df["at"] = to_datetime(df["at"])
-        df = df.sort_values("at")
-        df = df.reset_index(drop=True)
+        if "at" in df.columns:
+            df["at"] = to_datetime(df["at"])
+            df = df.sort_values("at")
+            df = df.reset_index(drop=True)
         return df
     elif output == "raw":
         return chart
@@ -108,9 +109,10 @@ def trades(
     trades = json["data"]["trades"]
     if output == "dataframe":
         df = json_normalize(trades)
-        df["at"] = to_datetime(df["at"])
-        df = df.sort_values("at")
-        df = df.reset_index(drop=True)
+        if "at" in df.columns:
+            df["at"] = to_datetime(df["at"])
+            df = df.sort_values("at")
+            df = df.reset_index(drop=True)
         return df
     elif output == "raw":
         return trades
