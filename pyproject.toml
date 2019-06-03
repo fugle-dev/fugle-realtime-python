@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fugle-realtime"
-version = "0.2.2"
+version = "0.2.3"
 description = "Fugle Realtime"
 license = "MIT"
 readme = "README.md"
