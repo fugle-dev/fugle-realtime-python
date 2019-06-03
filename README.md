@@ -1,5 +1,10 @@
 # fugle-realtime-py
 
+![Travis (.org)](https://img.shields.io/travis/fortuna-intelligence/fugle-realtime-py.svg)
+![PyPI](https://img.shields.io/pypi/v/fugle-realtime.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fugle-realtime.svg)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/fugle-realtime.svg)
+
 Fugle Realtime Python is a Python package to query realtime stock quote of Taiwan market through API provided by [Fugle](https://www.fugle.tw/).
 
 Currently supported exchanges are [Taiwan Stock Exchange (TWSE)](http://www.twse.com.tw/) and [Taipei Exchange(TPEx)](https://www.tpex.org.tw/).
