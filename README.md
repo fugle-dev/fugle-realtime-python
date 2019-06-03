@@ -20,7 +20,7 @@ Currently supported exchanges are [Taiwan Stock Exchange (TWSE)](http://www.twse
 pip install fugle-realtime
 ```
 
-This package is compatible with Python 3.6 or higher.
+This package is compatible with Python 3.6 and 3.7.
 
 ## Usage
 

@@ -1,0 +1,12 @@
+dist: xenial
+language: python
+python:
+    - "3.6"
+    - "3.7"
+before_install:
+    - pip install poetry
+install:
+    - poetry install
+script:
+    - poetry run black --check .
+    - poetry run pytest
