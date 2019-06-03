@@ -11,13 +11,17 @@ Currently supported exchanges are [Taiwan Stock Exchange (TWSE)](http://www.twse
 
 ## Documentations
 
--  [Fugle Developer](https://developer.fugle.tw/)
+-   [Fugle Developer](https://developer.fugle.tw/)
 
-    - https://developer.fugle.tw/realtime
+    -   https://developer.fugle.tw/realtime
 
--  [PyPI](https://pypi.org/)
+-   [GitHub](https://github.com/)
 
-    - https://pypi.org/project/fugle-realtime/
+    -   https://github.com/fortuna-intelligence/fugle-realtime-py
+
+-   [PyPI](https://pypi.org/)
+
+    -   https://pypi.org/project/fugle-realtime/
 
 ## Installation
 
