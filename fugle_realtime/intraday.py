@@ -87,18 +87,20 @@ def quote(
         return quote
 
 
-def trades(
+def dealts(
     apiToken="demo",
     apiVersion="v0",
     host="api.fugle.tw",
     output="dataframe",
     symbolId="2884",
+    limit=50,
+    offset=0,
 ):
     outputs = ["dataframe", "raw"]
     if output not in outputs:
         raise ValueError('output must be one of ["dataframe", "raw"]')
-    url = "https://{}/realtime/{}/intraday/trades".format(host, apiVersion)
-    params = dict(apiToken=apiToken, symbolId=symbolId)
+    url = "https://{}/realtime/{}/intraday/dealts".format(host, apiVersion)
+    params = dict(apiToken=apiToken, symbolId=symbolId, limit=limit, offset=offset)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
@@ -106,13 +108,13 @@ def trades(
             return json_normalize(json)
         elif output == "raw":
             return json
-    trades = json["data"]["trades"]
+    dealts = json["data"]["dealts"]
     if output == "dataframe":
-        df = json_normalize(trades)
+        df = json_normalize(dealts)
         if "at" in df.columns:
             df["at"] = to_datetime(df["at"])
             df = df.sort_values("at")
             df = df.reset_index(drop=True)
         return df
     elif output == "raw":
-        return trades
+        return dealts
