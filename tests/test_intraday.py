@@ -69,23 +69,23 @@ def test_intraday_quote_output_raw():
     assert type(quote) is dict
 
 
-def test_intraday_trades():
-    trades = intraday.trades()
-    assert type(trades) is DataFrame
+def test_intraday_dealts():
+    dealts = intraday.dealts()
+    assert type(dealts) is DataFrame
 
 
-def test_intraday_trades_output():
+def test_intraday_dealts_output():
     with raises(ValueError) as excinfo:
-        intraday.trades(output="")
+        intraday.dealts(output="")
     assert excinfo.type is ValueError
     assert str(excinfo.value) == 'output must be one of ["dataframe", "raw"]'
 
 
-def test_intraday_trades_output_dataframe():
-    trades = intraday.trades(output="dataframe")
-    assert type(trades) is DataFrame
+def test_intraday_dealts_output_dataframe():
+    dealts = intraday.dealts(output="dataframe")
+    assert type(dealts) is DataFrame
 
 
-def test_intraday_trades_output_raw():
-    trades = intraday.trades(output="raw")
-    assert type(trades) is list
+def test_intraday_dealts_output_raw():
+    dealts = intraday.dealts(output="raw")
+    assert type(dealts) is list
