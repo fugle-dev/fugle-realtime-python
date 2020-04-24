@@ -55,10 +55,10 @@ intraday.meta(apiToken="demo", output="dataframe", symbolId="2884")
 intraday.quote(apiToken="demo", output="dataframe", symbolId="2884")
 ```
 
-### [`intraday.trades`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_trades): https://api.fugle.tw/realtime/v0/intraday/trades
+### [`intraday.dealts`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_dealts): https://api.fugle.tw/realtime/v0/intraday/dealts
 
 ```py
-intraday.trades(apiToken="demo", output="dataframe", symbolId="2884")
+intraday.dealts(apiToken="demo", output="dataframe", symbolId="2884", limit=50, offset=0)
 ```
 
 `output="dataframe"` will return [pandas](https://pandas.pydata.org/) [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html), which is the default. `output="raw"` will return [python](https://www.python.org/) built-in [`dict`](https://docs.python.org/3/library/stdtypes.html#dict) or [`list`](https://docs.python.org/3/library/stdtypes.html#list) accordingly.
