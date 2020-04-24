@@ -93,17 +93,14 @@ def dealts(
     host="api.fugle.tw",
     output="dataframe",
     symbolId="2884",
-    limit = 50,
-    offset = 0
+    limit=50,
+    offset=0,
 ):
     outputs = ["dataframe", "raw"]
     if output not in outputs:
         raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/dealts".format(host, apiVersion)
-    params = dict(apiToken=apiToken,
-                  symbolId=symbolId,
-                  limit=limit,
-                  offset=offset)
+    params = dict(apiToken=apiToken, symbolId=symbolId, limit=limit, offset=offset)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
