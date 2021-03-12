@@ -9,12 +9,13 @@ def chart(
     host="api.fugle.tw",
     output="dataframe",
     symbolId="2884",
+    oddLot=False,
 ):
     outputs = ["dataframe", "raw"]
     if output not in outputs:
         raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/chart".format(host, apiVersion)
-    params = dict(apiToken=apiToken, symbolId=symbolId)
+    params = dict(apiToken=apiToken, symbolId=symbolId, oddLot=oddLot)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
@@ -41,12 +42,13 @@ def meta(
     host="api.fugle.tw",
     output="dataframe",
     symbolId="2884",
+    oddLot=False,
 ):
     outputs = ["dataframe", "raw"]
     if output not in outputs:
         raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/meta".format(host, apiVersion)
-    params = dict(apiToken=apiToken, symbolId=symbolId)
+    params = dict(apiToken=apiToken, symbolId=symbolId, oddLot=oddLot)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
@@ -67,12 +69,13 @@ def quote(
     host="api.fugle.tw",
     output="dataframe",
     symbolId="2884",
+    oddLot=False,
 ):
     outputs = ["dataframe", "raw"]
     if output not in outputs:
         raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/quote".format(host, apiVersion)
-    params = dict(apiToken=apiToken, symbolId=symbolId)
+    params = dict(apiToken=apiToken, symbolId=symbolId, oddLot=oddLot)
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
@@ -95,12 +98,19 @@ def dealts(
     symbolId="2884",
     limit=50,
     offset=0,
+    oddLot=False,
 ):
     outputs = ["dataframe", "raw"]
     if output not in outputs:
         raise ValueError('output must be one of ["dataframe", "raw"]')
     url = "https://{}/realtime/{}/intraday/dealts".format(host, apiVersion)
-    params = dict(apiToken=apiToken, symbolId=symbolId, limit=limit, offset=offset)
+    params = dict(
+        apiToken=apiToken,
+        symbolId=symbolId,
+        limit=limit,
+        offset=offset,
+        oddLot=oddLot,
+    )
     response = get(url=url, params=params)
     json = response.json()
     if response.status_code != 200:
