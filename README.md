@@ -37,25 +37,25 @@ This package is compatible with Python 3.6 and 3.7.
 from fugle_realtime import intraday
 ```
 
-### [`intraday.chart`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_chart): https://api.fugle.tw/realtime/v0/intraday/chart
+### [`intraday.chart`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_chart): https://api.fugle.tw/realtime/v0.3/intraday/chart?symbolId=2884&apiToken=demo
 
 ```py
 intraday.chart(apiToken="demo", output="dataframe", symbolId="2884")
 ```
 
-### [`intraday.meta`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_meta): https://api.fugle.tw/realtime/v0/intraday/meta
+### [`intraday.meta`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_meta): https://api.fugle.tw/realtime/v0.3/intraday/meta?symbolId=2884&apiToken=demo
 
 ```py
 intraday.meta(apiToken="demo", output="dataframe", symbolId="2884")
 ```
 
-### [`intraday.quote`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_quote): https://api.fugle.tw/realtime/v0/intraday/quote
+### [`intraday.quote`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_quote): https://api.fugle.tw/realtime/v0.3/intraday/quote?symbolId=2884&apiToken=demo
 
 ```py
 intraday.quote(apiToken="demo", output="dataframe", symbolId="2884")
 ```
 
-### [`intraday.dealts`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_dealts): https://api.fugle.tw/realtime/v0/intraday/dealts
+### [`intraday.dealts`](https://developer.fugle.tw/realtime/document#/Intraday/get_intraday_dealts): https://api.fugle.tw/realtime/v0.3/intraday/dealts?symbolId=2884&apiToken=demo
 
 ```py
 intraday.dealts(apiToken="demo", output="dataframe", symbolId="2884", limit=50, offset=0)
