@@ -5,7 +5,7 @@
 Git clone the repository:
 
 ```sh
-git clone https://github.com/fortuna-intelligence/fugle-realtime-py.git
+git clone https://github.com/fugle-dev/fugle-realtime-py.git
 cd fugle-realtime-py
 ```
 

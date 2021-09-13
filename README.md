@@ -1,6 +1,6 @@
 # fugle-realtime-py
 
-[![Travis (.org)](https://img.shields.io/travis/fortuna-intelligence/fugle-realtime-py.svg)](https://travis-ci.org/fortuna-intelligence/fugle-realtime-py)
+[![Travis (.org)](https://img.shields.io/travis/fugle-dev/fugle-realtime-py.svg)](https://travis-ci.org/fugle-dev/fugle-realtime-py)
 [![PyPI](https://img.shields.io/pypi/v/fugle-realtime.svg)](https://pypi.org/project/fugle-realtime/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fugle-realtime.svg)](https://pypi.org/project/fugle-realtime/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/fugle-realtime.svg)](https://pypi.org/project/fugle-realtime/)
@@ -17,7 +17,7 @@ Currently supported exchanges are [Taiwan Stock Exchange (TWSE)](http://www.twse
 
 -   [GitHub](https://github.com/)
 
-    -   https://github.com/fortuna-intelligence/fugle-realtime-py
+    -   https://github.com/fugle-dev/fugle-realtime-py
 
 -   [PyPI](https://pypi.org/)
 
