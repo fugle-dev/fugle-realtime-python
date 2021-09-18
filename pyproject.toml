@@ -3,6 +3,12 @@ name = "fugle-realtime"
 version = "0.3.0"
 description = "Fugle Realtime API client library for Python"
 authors = ["Fortuna Intelligence Co., Ltd. <development@fugle.tw>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/fugle-dev/fugle-realtime-py#readme"
+repository = "https://github.com/fugle-dev/fugle-realtime-py"
+documentation = "https://developer.fugle.tw"
+keywords = ["fugle", "realtime", "stock"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
