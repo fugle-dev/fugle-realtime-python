@@ -1,5 +1,7 @@
 # Fugle Realtime
 
+[![build](https://img.shields.io/github/workflow/status/fugle-dev/fugle-realtime-py/Run%20Tests/next)](https://github.com/fugle-dev/fugle-realtime-py/actions/workflows/pytest.yml)
+
 > Fugle Realtime API client library for Python
 
 ## Install
