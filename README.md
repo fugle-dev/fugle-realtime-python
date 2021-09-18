@@ -1,6 +1,8 @@
 # Fugle Realtime
 
-[![build](https://img.shields.io/github/workflow/status/fugle-dev/fugle-realtime-py/Run%20Tests/next)](https://github.com/fugle-dev/fugle-realtime-py/actions/workflows/pytest.yml)
+[![PyPI version][pypi-image]][pypi-url]
+[![Python version][python-image]][python-url]
+[![Build Status][action-image]][action-url]
 
 > Fugle Realtime API client library for Python
 
@@ -79,3 +81,10 @@ if __name__ == '__main__':
 ## License
 
 [MIT](LICENSE)
+
+[pypi-image]: https://img.shields.io/pypi/v/fugle-realtime
+[pypi-url]: https://pypi.org/project/fugle-realtime
+[python-image]: https://img.shields.io/pypi/pyversions/fugle-realtime
+[python-url]: https://pypi.org/project/fugle-realtime
+[action-image]: https://img.shields.io/github/workflow/status/fugle-dev/fugle-realtime-py/Run%20Tests/next
+[action-url]: https://github.com/fugle-dev/fugle-realtime-py/actions/workflows/pytest.yml
