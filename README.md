@@ -21,37 +21,37 @@ The library a Python client that supports HTTP API and WebSocket.
 ```py
 from fugle_realtime import HttpClient
 
-client = HttpClient(api_token='demo')
+api_client = HttpClient(api_token='demo')
 ```
 
 #### intraday.meta
 
 ```py
-client.intraday.meta(symbolId='2884')
+api_client.intraday.meta(symbolId='2884')
 ```
 
 #### intraday.quote
 
 ```py
-client.intraday.quote(symbolId='demo')
+api_client.intraday.quote(symbolId='demo')
 ```
 
 #### intraday.chart
 
 ```py
-client.intraday.chart(symbolId='demo')
+api_client.intraday.chart(symbolId='demo')
 ```
 
 #### intraday.dealts
 
 ```py
-client.intraday.chart(symbolId='demo', limit=50)
+api_client.intraday.chart(symbolId='demo', limit=50)
 ```
 
 #### intraday.volumes
 
 ```py
-client.intraday.volumes(symbolId='demo')
+api_client.intraday.volumes(symbolId='demo')
 ```
 
 ### Simple WebSocket Demo
@@ -64,8 +64,8 @@ def handle_message(message):
     print(message)
 
 def main():
-    client = WebSocketClient(api_token='demo')
-    ws = client.intraday.quote(symbolId='2884', on_message=handle_message)
+    ws_client = WebSocketClient(api_token='demo')
+    ws = ws_client.intraday.quote(symbolId='2884', on_message=handle_message)
     ws.run_async()
     time.sleep(3)
     ws.close()
