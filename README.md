@@ -33,25 +33,25 @@ api_client.intraday.meta(symbolId='2884')
 #### intraday.quote
 
 ```py
-api_client.intraday.quote(symbolId='demo')
+api_client.intraday.quote(symbolId='2884')
 ```
 
 #### intraday.chart
 
 ```py
-api_client.intraday.chart(symbolId='demo')
+api_client.intraday.chart(symbolId='2884')
 ```
 
 #### intraday.dealts
 
 ```py
-api_client.intraday.chart(symbolId='demo', limit=50)
+api_client.intraday.dealts(symbolId='2884', limit=50)
 ```
 
 #### intraday.volumes
 
 ```py
-api_client.intraday.volumes(symbolId='demo')
+api_client.intraday.volumes(symbolId='2884')
 ```
 
 ### Simple WebSocket Demo
