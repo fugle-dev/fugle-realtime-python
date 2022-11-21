@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fugle-realtime"
-version = "0.3.1"
+version = "0.3.2"
 description = "Fugle Realtime API client library for Python"
 authors = ["Fortuna Intelligence Co., Ltd. <development@fugle.tw>"]
 license = "MIT"
