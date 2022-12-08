@@ -64,9 +64,9 @@ class TestHttpClient(object):
         requests.get.assert_called_once_with(
             'https://api.fugle.tw/realtime/v0.3/intraday/volumes?symbolId=2884&apiToken=demo')
 
-    def test_historical_charts(self, mocker):
+    def test_historical_candles(self, mocker):
         mocker.patch('requests.get')
         client = HttpClient()
-        client.historical.charts('2884', '2022-02-07', '2022-02-11', 'open,high,low,close,volume,turnover,change')
+        client.historical.candles('2884', '2022-02-07', '2022-02-11', 'open,high,low,close,volume,turnover,change')
         requests.get.assert_called_once_with(
-            'https://api.fugle.tw/marketdata/v0.3/chart?symbolId=2884&from=2022-02-07&to=2022-02-11&fields=open%2Chigh%2Clow%2Cclose%2Cvolume%2Cturnover%2Cchange&apiToken=demo')
+            'https://api.fugle.tw/marketdata/v0.3/candles?symbolId=2884&from=2022-02-07&to=2022-02-11&fields=open%2Chigh%2Clow%2Cclose%2Cvolume%2Cturnover%2Cchange&apiToken=demo')
