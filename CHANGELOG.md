@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.4.0](https://github.com/fugle-dev/fugle-realtime-python/compare/v0.3.2...v0.4.0) (2022-12-08)
+
+
+### Features
+
+* add support for historical api ([#10](https://github.com/fugle-dev/fugle-realtime-python/issues/10)) ([4bfe8a9](https://github.com/fugle-dev/fugle-realtime-python/commit/4bfe8a99a6cf9faaffe29eef232d7b63fd823b42))
+
 ### [0.3.2](https://github.com/fugle-dev/fugle-realtime-python/compare/v0.3.1...v0.3.2) (2022-11-21)
 
 
