@@ -54,6 +54,13 @@ api_client.intraday.dealts(symbolId='2884', limit=50)
 api_client.intraday.volumes(symbolId='2884')
 ```
 
+#### historical.candles
+
+```py
+api_client.historical.candles('2884', '2022-02-07', '2022-02-11', None)
+api_client.historical.candles('2884', None, None, 'open,high,low,close,volume,turnover,change')
+```
+
 ### Simple WebSocket Demo
 
 ```py

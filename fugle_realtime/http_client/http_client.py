@@ -1,7 +1,8 @@
 from ..base_client import BaseClient
 from .intraday import Intraday
+from .historical import Historical
 
-FUGLE_REALTIME_HTTP_URL = 'https://api.fugle.tw/realtime'
+FUGLE_REALTIME_HTTP_URL = 'https://api.fugle.tw'
 
 
 class HttpClient(BaseClient):
@@ -11,3 +12,7 @@ class HttpClient(BaseClient):
     @property
     def intraday(self):
         return Intraday(self.config)
+
+    @property
+    def historical(self):
+        return Historical(self.config)

@@ -16,7 +16,7 @@ requests = "^2.26.0"
 websocket-client = "^1.2.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "=6.2.5"
 pytest-mock = "^3.6.1"
 pytest-cov = "^2.12.1"
 
