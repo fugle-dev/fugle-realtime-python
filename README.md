@@ -93,5 +93,5 @@ if __name__ == '__main__':
 [pypi-url]: https://pypi.org/project/fugle-realtime
 [python-image]: https://img.shields.io/pypi/pyversions/fugle-realtime
 [python-url]: https://pypi.org/project/fugle-realtime
-[action-image]: https://img.shields.io/github/workflow/status/fugle-dev/fugle-realtime-py/Run%20Tests/next
+[action-image]: https://img.shields.io/github/actions/workflow/status/fugle-dev/fugle-realtime-python/pytest.yml?branch=master
 [action-url]: https://github.com/fugle-dev/fugle-realtime-py/actions/workflows/pytest.yml
