@@ -1,9 +1,15 @@
 # Changelog
 
+### [0.4.2](https://github.com/fugle-dev/fugle-realtime-python/compare/v0.4.1...v0.4.2) (2023-04-08)
+
+
+### Bug Fixes
+
+* access the correct API endpoints on Windows ([8eca856](https://github.com/fugle-dev/fugle-realtime-python/commit/8ae0dacf96de9e2ab0e5ba7185f3c4a4cf76d2a8))
+
 ### [0.4.1](https://github.com/fugle-dev/fugle-realtime-python/compare/v0.4.0...v0.4.1) (2022-12-26)
 
 ### [0.4.0](https://github.com/fugle-dev/fugle-realtime-python/compare/v0.3.2...v0.4.0) (2022-12-08)
-
 
 ### Features
 
