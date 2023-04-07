@@ -1,4 +1,4 @@
-from urllib.parse import urlencode, urljoin
+from urllib.parse import urlencode
 import os
 import requests
 
@@ -18,10 +18,8 @@ class Historical:
         return requests.get(self.compile_url('/candles', params)).json()
 
     def compile_url(self, path, params):
-        source = 'marketdata'
         params['apiToken'] = self.config['api_token']
-        base_url = urljoin(self.config['url'], os.path.join(
-            source, self.config['api_version']))
+        base_url = self.config['url'] + '/marketdata/' + self.config['api_version']
         endpoint = path if (path.startswith('/')) else '/' + path
         query = '?' + urlencode(params)
         return base_url + endpoint + query

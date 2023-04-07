@@ -1,4 +1,4 @@
-from urllib.parse import urlencode, urljoin
+from urllib.parse import urlencode
 import os
 import requests
 
@@ -23,10 +23,8 @@ class Intraday:
         return requests.get(self.compile_url('/intraday/volumes', params)).json()
 
     def compile_url(self, path, params):
-        source = 'realtime'
         params['apiToken'] = self.config['api_token']
-        baseUrl = urljoin(self.config['url'], os.path.join(
-            source, self.config['api_version']))
+        base_url = self.config['url'] + '/realtime/' + self.config['api_version']
         endpoint = path if (path.startswith('/')) else '/' + path
         query = '?' + urlencode(params)
-        return baseUrl + endpoint + query
+        return base_url + endpoint + query
